@@ -20,9 +20,8 @@ public class HasMoneyState extends VendingMachineState
 
     public void dispense()
     {
+        vendingMachine.setVendingMachineState(new DispensingState(vendingMachine));
         vendingMachine.dispenseItem();
-        vendingMachine.setVendingMachineState(new DispensingState(vendingMachine
-        ));
     }
     public void refund() {
         vendingMachine.refundBalance();
